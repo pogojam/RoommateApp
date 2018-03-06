@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.App {
+  text-align: center;
+  font-family: 'Hind Siliguri', sans-serif;
+  color: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+a{
+text-decoration: none;
+}
+ 
+
+.button{
+  background-color: #222; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+
+/*Home */
+
+.home {
+  background-color: #F53914;
+  height: 100vh;
+}
+
+.home_user{
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.home_user-roomate{
+  flex-basis: 100%;
+}
+.home_user-landlord{
+  flex-basis: 100%;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/*Form
+*/
+
+input{
+  border:1px;
+  border-color: black;
+}
