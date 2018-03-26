@@ -25,7 +25,10 @@ a{
 text-decoration: none;
 }
  
-
+/* Logo */
+#AppLogo {
+  stroke: #78292E;
+}
 
 /*Defaults*/
 .Wrapper {
@@ -112,6 +115,22 @@ border-right: 0px;
 
 .dashboard{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: bisque;
+  height: 100%;
+  width: 100%
 }
+
+
+.leftpanel{
+  display: flex;
+  overflow: hidden;
+  flex-grow: 1;
+}
+.rightpanel{
+  flex-grow: 1;
+  background-color: burlywood;
+  display: flex;
+  overflow: hidden;
+}
+

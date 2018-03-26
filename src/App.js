@@ -5,6 +5,7 @@ import {Route} from 'react-router-dom'
 import Home from './components/home'
 import Roomate from './components/Roomate'
 import userForm from './components/Userform'
+import houseDash from './components/houseDash'
 import {init as firebaseInit} from './server'
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
         <Route exact path={'/'} component={Home} ></Route>
         <Route exact path={'/roomate'} component={Roomate} ></Route>
         <Route exact path={'/userForm'} component={userForm} ></Route>
+        <Route exact path={'/houseDash'} component={houseDash}></Route>
       </div>
     );
   }
