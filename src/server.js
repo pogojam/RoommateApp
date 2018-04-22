@@ -1,6 +1,6 @@
 import userModel from './models/user'
 
-const firebase = require('firebase')
+export const firebase  = require('firebase')
         require('firebase/firestore')
         require('firebase/auth')
 
@@ -37,6 +37,12 @@ export const createUser = (email,password)=>{
   firebase.auth().createUserWithEmailAndPassword(email,password)
   .catch(function(err){
     console.error(err);
-    
+    return err
   })
 }
+
+export const getLoggedIn = (email,pass)=>{
+  firebase.auth().signInWithEmailAndPassword(email,pass)
+}
+
+

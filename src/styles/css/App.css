@@ -1,0 +1,255 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  
+}
+
+.App {
+  text-align: center;
+  color: black;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Julius Sans One', sans-serif;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+text-decoration: none;
+}
+ 
+.ui{
+  font-family: 'Julius Sans One', sans-serif !important;
+}
+/* Logo */
+#AppLogo {
+  stroke: #607992;
+}
+
+/*Defaults*/
+.Wrapper {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Wrapper .ui {
+margin: 1em;
+}
+
+.ui.button{
+  border-radius: 10.285714rem;
+  background: none;
+  border: solid #607992 2px;
+  transition: all .3s;
+  color: darkslategray;  
+}
+
+.ui.button:hover{
+background-color: none;
+transform: scale(1.1);
+color: darkslategray;  
+
+}
+
+.item{
+  height: 100%;
+  background-size: cover !important;
+}
+
+/*Home */
+
+.home{
+  width:100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  transition: all 2s;
+}
+
+.home-panel{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-panel + div {
+  background-color: #D8D8D8;
+}
+
+.home-panel > .button {
+  background-color: transparent;
+  border: black solid 1px;
+  margin: 2em;
+}
+.home-panel > i {
+  align-self: center;
+}
+.home-subheader{
+  transition: all .5s ;
+  font-size: .2em;
+}
+.header-home{
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+/*Log in Form
+*/
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  display: block;
+  height: 100%;
+  color: whitesmoke !important;
+}
+
+.loginForm-input{
+font-family: inherit;
+margin: .3em;
+text-align: center;
+font-size: .9em;
+align-self: center;
+border: whitesmoke  solid  1px ;
+height: 3em;
+border-left: 0px;
+border-right: 0px;
+
+} 
+
+.loginForm-Button{
+  font-family: inherit;
+  border: 1px solid black;
+  width:9em;
+  height: 3em;
+  border-radius: 50px;
+  margin: 2em;
+}
+
+/*Dashboard*/
+
+.dashboard{
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr 12fr;
+}
+
+
+.dashboard-Nav{
+  height: 100%;
+ display: grid;
+  background-color: transparent;
+
+}
+.menu-Container{
+    display: grid;
+    grid-template-rows: repeat(4fr,4);
+    height: auto;
+}
+
+.dashboard-Nav--Menu{
+  display: grid !important ;
+  justify-content: center;
+}
+.dashboard-Panel{
+margin: 2em;
+overflow: scroll;
+}
+.dashboard-Panel::-webkit-scrollbar{
+  display: none;
+}
+.dasboard-topPanel-Header{
+  width: 40vw;
+}
+
+
+
+.dashboard-Panel--Wrapper{
+  display: grid;
+  grid-gap: 2em ;
+  height: 100%;
+}
+
+
+.dashboard-Panel--Wrapper > div {
+    background-color:  lightgray;
+    border-top: 0px;
+    border-right: 0px;
+
+}
+
+.dashboard-userView{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5em;
+    text-transform: lowercase;
+    font-size: .8em;
+} 
+
+.dashboard-header{
+  font-size: 1em;
+
+}
+.live-FeedPanel{
+  grid-column-end: 3;
+  grid-column-start: 1;
+  display: grid;
+}
+
+/* 
+Animations
+*/
+.fade-appear{
+  opacity: 0;
+ 
+
+}
+.fade-enter{
+
+}
+.fade-enter-active{
+  display: none;
+}
+
+.fade-exit{
+  opacity: 0;
+  transition: all .3s;
+}
+
+.show{
+  opacity: 1;
+}
+.hidden{
+  opacity: 0;
+}
+
+/* 
+Roomate Tile Styles
+*/
+.info-Romate{
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.info-Romate-Tile{
+
+
+}
+
+.profile-pic{
+
+}

@@ -1,30 +1,41 @@
 import React, { Component } from 'react'
-import { Segment,Icon,Label, Input, Button,Form,Checkbox } from 'semantic-ui-react'
-import { createUser } from '../server'
+import FormField, { Segment, Icon, Label, Input, Button, Form, Checkbox,Header } from 'semantic-ui-react'
+import {firebase} from '../server'
 
 export default class Userform extends Component {
 constructor(props) {
   super(props)
 
   this.state = {
-     
+     email:'',
+     password:''
   }
 }
 
-  handleNameFirst(e){
+ 
+  handlePassword(e){
     this.setState({
-      first:e.target.value
+password:e.target.value
     })
   }
-  hanleNameLast(e){
-    this.setState({
-      last:e.target.value
+  handleSubmit(e){
+let error = null
+    firebase.auth().createUserWithEmailAndPassword(this.state.email,this.state.password)
+    .catch(function(err){
+      console.error(err);
+      error = err
     })
-  }
-  handleSubmit(){
-    const name = this.state.first +' '+ this.state.last
 
-    createUser(name)
+    this.setState({
+      email:'',
+      password:'',
+      error:error
+    })
+  }
+  handleEmail(e){
+    this.setState({
+      email:e.target.value
+    })
   }
 
   render() {
@@ -34,17 +45,21 @@ constructor(props) {
       <div className='Wrapper' >
         <Segment>
       <Form>
-    <Form.Field>
-      <label>First Name</label>
-      <input onChange={this.handleNameFirst.bind(this)} placeholder='First Name' />
+    <Form.Field error={this.setState.error} >
+       <Header.Subheader href="" style={{padding:'1em'}} >
+       Set your username and password for your house. 
+       </Header.Subheader>
+      <label>Email</label>
+      <input value={this.state.email} onChange={this.handleEmail.bind(this)}  placeholder='Email' />
     </Form.Field>
     <Form.Field>
-      <label>Last Name</label>
-      <input onChange={this.hanleNameLast.bind(this)} placeholder='Last Name' />
+      <label>Password</label>
+      <input value={this.state.password} type='password' onChange={this.handlePassword.bind(this)} placeholder='Password' />
     </Form.Field>
     <Form.Field>
       <Checkbox label='I agree to the Terms and Conditions' />
     </Form.Field>
+  
     <Button onClick={this.handleSubmit.bind(this)} type='submit'>Submit</Button>
   </Form>
   </Segment>

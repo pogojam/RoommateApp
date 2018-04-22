@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import { inherits } from 'util';
 
 
 export class MapContainer extends Component {
@@ -7,7 +8,7 @@ constructor(props) {
   super(props)
   const location = props.location
   this.state = {
-  
+
      lat:null,
      lng:null
   }
@@ -15,11 +16,12 @@ constructor(props) {
 
 render() {
     const mapStyle = {
-        width:'50%',
-        height:'30%'
+        height:'35vh',
+        width:'20vw'
     }
     return (
       <Map 
+      className='mapDashboard'
       google={this.props.google}
       style={mapStyle}
       zoom={14} 

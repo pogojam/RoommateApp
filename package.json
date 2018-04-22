@@ -3,18 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "3.4.1",
+    "chart.js": "^2.7.2",
     "firebase": "^4.11.0",
     "google-maps-react": "^1.1.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "*",
+    "react-router-dom": "4.2.2",
     "react-scripts": "1.1.0",
+    "react-transition-group": "^2.2.1",
+    "react-vis": "^1.9.2",
+    "save": "^2.3.2",
+    "semantic-ui-react": "0.79.1",
     "uiw-iconfont": "^1.2.6"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-sass":"sass src/styles/sass/app.scss src/styles/css/App.css"
   }
 }
