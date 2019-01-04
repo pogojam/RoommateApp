@@ -7,7 +7,7 @@ import {Redirect,Route,Router,Switch} from 'react-router-dom'
 import Home from './components/home'
 import LoginPage from './components/LoginPage'
 import userForm from './components/Userform'
-import HouseDash from './components/HouseDash'
+import HouseDash from './components/houseDash'
 import {firebase,init} from './server'
 
 

@@ -2,24 +2,21 @@ import React, { Component } from "react";
 import { getUsers } from "../server";
 import Map from "./houseMap";
 import {
-  Image,
   Radio,
   Menu,
   Divider,
-  Segment,
   Icon,
-  Label,
-  Input,
-  Button,
-  Form,
-  Checkbox
 } from "semantic-ui-react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+import styled from 'styled-components'
 import { dashMenu } from "../assets/assets";
 import { XYPlot,HorizontalGridLines,XAxis,YAxis, LineSeries } from "react-vis";
 
 
-const initState = {};
+const StyledSvg = styled.svg`
+
+`
+
 
 export default class HouseDash extends Component {
   constructor(props) {
@@ -54,6 +51,7 @@ export default class HouseDash extends Component {
               viewBox="0 0 157 161"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
+              style={{alignSelf:'center',justifySelf:'center'}}
             >
               <defs />
               <g
