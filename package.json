@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.11.6",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "firebase": "^4.11.0",
     "google-maps-react": "^1.1.4",
     "react": "^16.4.1",
